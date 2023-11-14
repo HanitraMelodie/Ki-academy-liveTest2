@@ -4,16 +4,15 @@ const rootDir = require("../util/path")
 const currentDate = require("../util/date")
 const adminController = require("../controllers/adminController")
 
-const books = []
-
-
 const router = express.Router()
 
-router.get("/add-book", adminController.getBooks)
+router.get("/", adminController.getBooks)
+
+router.get("/add-book",adminController.getAddBook)
 
 router.post("/add-book", adminController.postAddBook)
 
-router.get("/books", adminController.getBooks)
+router.get("/", adminController.getBooks)
 
 router.get("/edit-book/:id", adminController.getEditBook)
 

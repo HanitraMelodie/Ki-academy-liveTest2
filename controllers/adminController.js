@@ -1,7 +1,7 @@
 const Book = require("../models/Book")
 
 exports.getAddBook= function(req, res){
-	res.render("admin/edit-book.ejs", {book: undefined, pageTitle: "Add book"})
+	res.render("admin/add-book.ejs", {book: undefined, pageTitle: "Add book"})
 }
 
 exports.postAddBook = function(req, res){
@@ -16,7 +16,7 @@ exports.postAddBook = function(req, res){
 
 exports.getBooks = function(req, res){
 	Book.fetchAll().then(function(books){
-		res.render("admin/books.ejs", {books: books[0], pageTitle: "All books"})
+		res.render("admin/add-book.ejs", {books: books[0], pageTitle: "All books"})
 	}).catch(function(err){
 		res.send("Error occured: " + err)
 	})

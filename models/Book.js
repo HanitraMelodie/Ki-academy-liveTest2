@@ -15,7 +15,7 @@ module.exports = class Book{
 		}
 		else{
 			// Insert a new book
-			return db.execute('INSERT INTO books (title, author) VALUES (?, ?, ?, ?)', [this.title, this.author])
+			return db.execute('INSERT INTO books (title, author) VALUES (?, ?)', [this.title, this.author])
 		}
 	}
 

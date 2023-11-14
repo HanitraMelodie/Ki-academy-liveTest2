@@ -4,7 +4,7 @@
         <form action="/admin/<% if(book) { %>edit-book<%}else {%>add-book<%}%>" method="POST">
             <input type="text" name="title" placeholder="Title" value="<%if(book){%><%=book.title%><%}%>">
             <br>
-            <input type="text" name="price" placeholder="Author" value="<% if(book) { %><%=book.author %><%}%>">
+            <input type="text" name="author" placeholder="Author" value="<% if(book) { %><%=book.author %><%}%>">
             <br>
 			<input type="hidden" value="<%if(book){%><%=book.id%><%}%>" name="id">
             <button type="submit"><% if(book) { %> Update Book <% }else{ %> Add Book <%}%></button>

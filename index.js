@@ -22,19 +22,19 @@ server.use(express.static(path.join(__dirname, 'public')))
 
 // server.use("/admin", adminData)
 
-const checkIfAdmin=(req,res,next)=>{
-	if (req.query.admin==="true"){
-		req.isAdmin=true
-	}
-	else{
-		req.isAdmin=false
-	}
-	next()
-}
+// const checkIfAdmin=(req,res,next)=>{
+// 	if (req.query.admin==="true"){
+// 		req.isAdmin=true
+// 	}
+// 	else{
+// 		req.isAdmin=false
+// 	}
+// 	next()
+// }
 
 server.use(bookRoutes)
-server.use("/admin", checkIfAdmin)
-server.use("/admin", adminData.route)
+// server.use("/admin", checkIfAdmin)
+server.use("/admin", adminData)
 
 
 
